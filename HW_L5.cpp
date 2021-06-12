@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Task1.h"
 #include "Task2.h"
+#include "Task3.h"
 
 using namespace std;
 using namespace HWLesson5;
@@ -25,7 +26,11 @@ void Task2()
 
 void Task3()
 {
-
+	cout << "Заполнили массив:" << endl;
+	const size_t SIZE = 8;
+	unsigned short myArr[SIZE] = { 0 };
+	extenderArray(SIZE, myArr);
+	PrintArr(SIZE, true, myArr);
 }
 
 void Task4()
