@@ -2,6 +2,7 @@
 #include "Task1.h"
 #include "Task2.h"
 #include "Task3.h"
+#include "Task4.h"
 
 using namespace std;
 using namespace HWLesson5;
@@ -35,6 +36,17 @@ void Task3()
 
 void Task4()
 {
+	cout << "Циклическое смещение массива" << endl;
+	cout << "Исходный массив:" << endl;
+	const size_t SIZE = 15;
+	unsigned short myArr[SIZE] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+	PrintArr(SIZE, true, myArr);
+	short n;
+	cout << "Введите кол-во смещений n = " << endl;
+	cin >> n;
+	displaceArray(SIZE, n, myArr);
+	cout << "Смещенный на " << n << " массив:" << endl;
+	PrintArr(SIZE, false, myArr);
 
 }
 
