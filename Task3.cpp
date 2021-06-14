@@ -1,13 +1,9 @@
 
 namespace HWLesson5
 {
-	void extenderArray(size_t size, unsigned short arr[])
+	void extenderArray(size_t size, unsigned short *arr)
 	{
-		size_t delta = 1;
-		for (size_t i = 0; i < size; i++)
-		{
-			arr[i] = delta;
-			delta += 3;
-		}
+		arr[0] = 1;
+		for (size_t i = 1; i < size; arr[i] = arr[i - 1] + 3, i++);
 	}
 }
