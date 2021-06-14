@@ -7,6 +7,20 @@
 
 using namespace std;
 
+void (*invertArrPtr)(size_t, unsigned short*);
+void (*extenderArrayPtr)(size_t, unsigned short*);
+void (*displaceArrayPtr)(size_t, short, unsigned short*);
+bool (*checkMedianInArrPtr)(size_t size, int* arr, size_t& medianPos);
+
+void initFunctionPtr()
+{
+	using namespace HWLesson5;
+	invertArrPtr = invertArr;
+	extenderArrayPtr = extenderArray;
+	displaceArrayPtr = displaceArray;
+	checkMedianInArrPtr = checkMedianInArr;
+}
+
 void Task1()
 {
 	cout << "Вывод массива типа double:" << endl;
@@ -20,7 +34,7 @@ void Task2()
 	const size_t SIZE = 10;
 	unsigned short myArr[SIZE] = { 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 };
 	HWLesson5::PrintArr(SIZE, true, myArr);
-	HWLesson5::invertArr(SIZE, myArr);
+	invertArrPtr(SIZE, myArr);
 	cout << "Инверированный массив:" << endl;
 	HWLesson5::PrintArr(SIZE, false, myArr);
 }
@@ -30,7 +44,7 @@ void Task3()
 	cout << "Заполнили массив:" << endl;
 	const size_t SIZE = 8;
 	unsigned short myArr[SIZE] = { 0 };
-	HWLesson5::extenderArray(SIZE, myArr);
+	extenderArrayPtr(SIZE, myArr);
 	HWLesson5::PrintArr(SIZE, true, myArr);
 }
 
@@ -44,7 +58,7 @@ void Task4()
 	short n;
 	cout << "Введите кол-во смещений n = " << endl;
 	cin >> n;
-	HWLesson5::displaceArray(SIZE, n, myArr);
+	displaceArrayPtr(SIZE, n, myArr);
 	cout << "Смещенный на " << n << " массив:" << endl;
 	HWLesson5::PrintArr(SIZE, false, myArr);
 
@@ -60,7 +74,7 @@ void Task5()
 	//{ -5, 1, 1, 3, -10 };
 	size_t medianPos = 0;
 	HWLesson5::PrintArr(SIZE, true, myArr, medianPos);
-	if (HWLesson5::checkMedianInArr(SIZE, myArr, medianPos))
+	if (checkMedianInArrPtr(SIZE, myArr, medianPos))
 	{
 		cout << "В данном мвсиве медиана находится после " << medianPos << " элемента" << endl;
 		HWLesson5::PrintArr(SIZE, false, myArr, medianPos);
@@ -83,6 +97,8 @@ int main()
 		} while (taskNumber > 5 || taskNumber < 1);
 
 		cout << endl;
+
+		initFunctionPtr();
 
 		switch (taskNumber)
 		{
