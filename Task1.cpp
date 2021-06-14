@@ -1,4 +1,4 @@
-#include "Task1.h"
+ï»¿#include "Task1.h"
 
 using namespace std;
 
@@ -6,7 +6,7 @@ namespace HWLesson5
 {
 	void PrintArr(size_t size, double* Arr)
 	{
-		cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			cout << Arr[i] << ' ';
@@ -15,7 +15,7 @@ namespace HWLesson5
 	}
 	void PrintArr(size_t size, bool NeedCnt, unsigned short* Arr)
 	{
-		if (NeedCnt) cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		if (NeedCnt) cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			cout << Arr[i] << ' ';
@@ -24,7 +24,7 @@ namespace HWLesson5
 	}
 	void PrintArr(size_t size, bool NeedCnt, int* Arr, size_t medianPos)
 	{
-		if (NeedCnt) cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		if (NeedCnt) cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			if (medianPos > 0 && medianPos == i) cout << "|| ";
