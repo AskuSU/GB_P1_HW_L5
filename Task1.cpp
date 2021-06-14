@@ -22,4 +22,14 @@ namespace HWLesson5
 		}
 		cout << endl;
 	}
+	void PrintArr(size_t size, bool NeedCnt, int Arr[], size_t medianPos)
+	{
+		if (NeedCnt) cout << "Кол-во элементов = " << size << endl;
+		for (size_t i = 0; i < size; i++)
+		{
+			if (medianPos > 0 && medianPos == i) cout << "|| ";
+			cout << Arr[i] << ' ';
+		}
+		cout << endl;
+	}
 }
