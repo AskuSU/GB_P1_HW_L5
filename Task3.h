@@ -2,5 +2,5 @@
 
 namespace HWLesson5
 {
-	void extenderArray(size_t size, unsigned short *arr);
+	void extenderArray(size_t size, unsigned short* arr);
 }

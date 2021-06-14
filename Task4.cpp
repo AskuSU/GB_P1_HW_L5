@@ -1,7 +1,7 @@
 
 namespace HWLesson5
 {
-	void displaceArray(size_t size, short offset, unsigned short *arr)
+	void displaceArray(size_t size, short offset, unsigned short* arr)
 	{
 		bool isForward;
 		if (!(isForward = offset > 0)) offset = -offset;

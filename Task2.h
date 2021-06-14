@@ -2,5 +2,5 @@
 
 namespace HWLesson5
 {
-	void invertArr(size_t size, unsigned short shortArr[]);
+	void invertArr(size_t size, unsigned short* shortArr);
 }
